@@ -17,42 +17,56 @@ public class PurchaseItemsSteps extends BaseStepDefs{
     @Given("^I 'Quick view’ an item$")
     public void i_Quick_view_an_item() throws Throwable  {
         homePage.clickBlouseQuickView();
+        Thread.sleep(1000);
     }
 
     @When("^I Change the size of the item$")
     public void i_Change_the_size_of_the_item() throws Throwable {
         productPage.changeFocusToPopup();
         productPage.changeSizeToMedium();
+        //Thread.sleep(3000);
     }
 
     @When("^I Add that item to my basket$")
-    public void i_Add_that_item_to_my_basket() {
+    public void i_Add_that_item_to_my_basket() throws Throwable {
+        Thread.sleep(1000);
         productPage.addItemToCart();
+        Thread.sleep(1000);
         productPage.clickContinueShopping();
+        Thread.sleep(4000);
     }
 
     @When("^I ‘Quick view’ a different item \\(leave the size at the default\\)$")
     public void i_Quick_view_a_different_item_leave_the_size_at_the_default() throws Throwable {
+        Thread.sleep(1000);
         homePage.selectPrintedDress1();
+        Thread.sleep(1000);
     }
 
     @When("^I Add the item to my basket$")
-    public void i_Add_the_item_to_my_basket() {
+    public void i_Add_the_item_to_my_basket() throws Throwable {
+        Thread.sleep(1000);
         productPage.changeFocusToPopup();
+        Thread.sleep(1000);
         productPage.addItemToCart();
+        Thread.sleep(1000);
         productPage.clickProceedToCheckOut();
+        Thread.sleep(1000);
     }
 
     @When("^I View the basket to confirm that the items are of the size you selected,$")
-    public void i_View_the_basket_to_confirm_that_the_items_are_of_the_size_you_selected() {
+    public void i_View_the_basket_to_confirm_that_the_items_are_of_the_size_you_selected() throws Throwable {
         productPage.verifyItem1Size();
+        Thread.sleep(1000);
         productPage.verifyItem2Size();
+        Thread.sleep(1000);
     }
 
     @When("^I check that their prices are correct,$")
-    public void i_check_that_their_prices_are_correct() {
+    public void i_check_that_their_prices_are_correct() throws InterruptedException {
         productPage.verifyItem1Price();
         productPage.verifyItem2Price();
+        Thread.sleep(1000);
     }
 
     @When("^I Check that Total amount includes the Products with the Shipping cost$")
