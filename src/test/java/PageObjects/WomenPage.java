@@ -17,13 +17,13 @@ public class WomenPage {
     @FindBy(css = "#block_top_menu > ul > li:nth-child(1) > a")
     private WebElement WomenTab;
 
-    @FindBy(css = "#center_column > ul > li:nth-child(2) > div > div.right-block > div.button-container > a.button.ajax_add_to_cart_button.btn.btn-default > span")
+    @FindBy(css = "#center_column > ul > li:nth-child(2) > div > div.right-block > div.button-container > a.button.ajax_add_to_cart_button.btn.btn-default")
     private WebElement AddtoCart1;
 
     @FindBy(css = "#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > span > span")
     private WebElement ContinueShopping;
 
-    @FindBy(css = "#center_column > ul > li:nth-child(3) > div > div.right-block > div.button-container > a.button.ajax_add_to_cart_button.btn.btn-default > span")
+    @FindBy(css = "#center_column > ul > li:nth-child(3) > div > div.right-block > div.button-container > a.button.ajax_add_to_cart_button.btn.btn-default")
     private WebElement AddtoCart2;
 
     @FindBy(css = "#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > a > span")
