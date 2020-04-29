@@ -7,27 +7,25 @@ import cucumber.api.java.en.Then;
 public class WomenPagestepdefs extends BaseStepDefs {
 
     @Given("^I have clicked on women  page$")
-    public void iHaveClickedOnWomenPage()  {
-        WomenPage.clickWomenTab();
-    }
+    public void iHaveClickedOnWomenPage()  { womenPage.clickWomenTab(); }
 
     @And("^Added first item$")
     public void addedFirstItem() {
-        WomenPage.addItemToCart1();
+        womenPage.addItemToCart1();
     }
 
     @Then("^continue to the next item$")
     public void continueToTheNextItem() {
-        WomenPage.clickContinueShopping();
+        womenPage.clickContinueShopping();
     }
 
     @And("^Added second item$")
     public void addedSecondItem() {
-        WomenPage.addItemToCart2();
+        womenPage.addItemToCart2();
     }
 
     @Then("^It should both be in the cart$")
     public void itShouldBothBeInTheCart() {
-        WomenPage.clickProceedToCheckOut();
+        womenPage.clickProceedToCheckOut();
     }
 }

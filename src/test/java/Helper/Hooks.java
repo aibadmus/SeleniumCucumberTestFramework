@@ -10,8 +10,6 @@ public class Hooks extends DriverFactory {
         openChrome();
     }
     @After
-    public void closeDriver(){
-        driver.quit();
-    }
+    public void closeDriver(){ driver.quit(); }
 
 }

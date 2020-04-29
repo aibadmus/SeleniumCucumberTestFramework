@@ -11,9 +11,8 @@ public class BaseStepDefs extends DriverFactory {
     AddressPage addressPage;
     PaymentPage paymentPage;
     ShippingPage shippingPage;
-    WomenPage WomenPage;
-
-
+    DressPage dressPage;
+    WomenPage womenPage;
 
     public BaseStepDefs() {
         homePage = new HomePage(driver);
@@ -23,7 +22,8 @@ public class BaseStepDefs extends DriverFactory {
         addressPage = new AddressPage(driver);
         paymentPage = new PaymentPage(driver);
         shippingPage = new ShippingPage(driver);
-        WomenPage = new WomenPage(driver);
+        dressPage = new DressPage(driver);
+        womenPage = new WomenPage(driver);
     }
 
 }

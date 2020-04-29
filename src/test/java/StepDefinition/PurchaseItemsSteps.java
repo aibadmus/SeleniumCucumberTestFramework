@@ -19,12 +19,20 @@ public class PurchaseItemsSteps extends BaseStepDefs{
         homePage.clickBlouseQuickView();
         Thread.sleep(1000);
     }
-
+    @Given("^I have accessed dress page$")
+    public void i_have_accessed_dress_page()  {
+        dressPage.SelectDressButton();
+    }
     @When("^I Change the size of the item$")
     public void i_Change_the_size_of_the_item() throws Throwable {
         productPage.changeFocusToPopup();
         productPage.changeSizeToMedium();
         //Thread.sleep(3000);
+    }
+
+    @When("^I have clicked the dress I chose$")
+    public void I_have_clicked_the_dress_I_chose() {
+        dressPage.SummerDressButton();
     }
 
     @When("^I Add that item to my basket$")
@@ -98,6 +106,11 @@ public class PurchaseItemsSteps extends BaseStepDefs{
         // Write code here that turns the phrase above into concrete actions
     }
 
+    @Then("^I 'Quick View' a dress$")
+    public void I_Quick_View_a_dress() {
+        dressPage.QuickViewSummerDress();
+    }
+
     @And("^I click on the reorder button$")
     public void iClickOnTheReorderButton() throws Throwable {
         myAccountPage.clickOnReorderButton();
@@ -109,10 +122,23 @@ public class PurchaseItemsSteps extends BaseStepDefs{
         myAccountPage.takeScreenshotOfPage();
         paymentPage.clickOnSignOutButton();
     }
+    @Then("^Dress Size is chosen$")
+    public void Dress_Size_is_chosen() throws InterruptedException {
+        dressPage.DressPopup();
+        Thread.sleep(3000);
+        dressPage.DressSizeButton();
+    }
+
+    @Then("^the dress is added to the cart$")
+    public void the_dress_is_added_to_the_cart() throws InterruptedException {
+        dressPage.DressAddToCart();
+        Thread.sleep(3000);
+    }
 
     @Then("^I should get an error popup$")
     public void iShouldGetAnErrorPopup()throws Throwable {
         myAccountPage.takeScreenshotOfPage();
         paymentPage.clickOnSignOutButton();
     }
+
 }
